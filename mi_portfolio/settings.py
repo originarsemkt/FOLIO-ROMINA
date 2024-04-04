@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-%!3xm+rpzo6+24bj4tl@s+h@s$7b0nd@obh_#dcis&tfo*aww=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['originarse.com', 'www.originarse.com.ar']
+ALLOWED_HOSTS = ['127.0.0.1', 'tu_hostname']
 
 
 # Application definition
@@ -109,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'America/Argentina/Buenos_Aires'
-git add .
+
 
 USE_I18N = True
 
@@ -126,7 +126,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'pages', 'static'),
-    os.path.join(BASE_DIR, 'static')
+    #os.path.join(BASE_DIR, 'static')
 ]
 
 # Default primary key field type

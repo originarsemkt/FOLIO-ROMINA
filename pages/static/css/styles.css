@@ -6,7 +6,16 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #c7b9ca; /* Color de fondo cálido */
+    /* Elimina la especificación del color de fondo */
+    /* background-color: #c7b9ca; */
+
+    /* Aplica el video como fondo */
+    background-image: url('../../media/videos/Portfolio_Presentation.mp4');
+
+    /* Configura la visualización del video */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 header {
