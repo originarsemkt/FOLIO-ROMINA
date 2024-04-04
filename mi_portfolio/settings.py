@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-%!3xm+rpzo6+24bj4tl@s+h@s$7b0nd@obh_#dcis&tfo*aww=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['originarse.com', 'www.originarse.com.ar']
 
 
 # Application definition
@@ -106,9 +106,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Argentina/Buenos_Aires'
 git add .
 
 USE_I18N = True
@@ -125,7 +125,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    #os.path.join(BASE_DIR, 'pages', 'static'),
+    os.path.join(BASE_DIR, 'pages', 'static'),
     os.path.join(BASE_DIR, 'static')
 ]
 
