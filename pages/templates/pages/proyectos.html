@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROMINA RAQUEL GALEANO BLASCO - Proyectos</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <!-- Agrega más burbujas si lo deseas -->
+    </div>
+
+    <header>
+        <h1>Mi Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Inicio</a><li>
+                <li><a href="{% url 'personal-info' %}">Informacion_personal</a></li>   
+                <li><a href="{% url 'projects' %}">Proyectos</a></li>
+                <li><a href="{% url 'skills' %}">Habilidades</a></li>
+                <li><a href="{% url 'contact' %}">Contacto</a></li>
+                <li><a href="https://www.originarse.com.ar">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Bienvenido a mi Portfolio</h2>
+            <p>¡Aquí encontrarás mi trabajo y proyectos!</p>
+        </div>
+    </section>
+
+    <!-- Sección de Proyectos -->
+    <section class="projects">
+        <h2>Proyectos</h2>
+        <ul>
+            <li>
+                <h3>Mi Web</h3>
+                <p><strong>Tecnología:</strong> HTML, CSS</p>
+                <p>Se trata de mi sitio web personal. Puedes visitarlo en <a href="https://www.originarse.com.ar">www.originarse.com.ar</a>.</p>
+            </li>
+            <li>
+                <h3>Trabajo final en Coderhouse</h3>
+                <p><strong>Tecnología:</strong> JavaScript</p>
+                <p>Se trata de una tienda virtual Ecommerce de una tienda de informatica reconocida en Códoba, Argentina</p>
+            </li>
+            <li>
+                <h3>Circuito de seguridad</h3>
+                <p><strong>Tecnología:</strong> Ciberseguridad</p>
+                <p>Se trata de un circuito con todo lo que tiene que ver en entradas externas a través de redes y el circuito conveniente para evitar malwares y todo tipo de archivo dañino</p>
+            </li>
+            <li>
+                <h3>Herramienta Pomodoro T-Aviso</h3>
+                <p><strong>Tecnología:</strong> UX/UI</p>
+                <p>Una simulación en Figma sobre una herramienta Pomodoro llamada T-AVISO, la cual ayuda a controlar tu tiempo</p>
+            </li>
+            <li>
+                <h3>Censo Violencia de Género</h3>
+                <p><strong>Tecnología:</strong> Data Analytic</p>
+                <p>Análisis de datos del censo nacional de 2022 apuntando a la violencia de género en Argentina</p>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mi Portfolio</p>
+    </footer>
+</body>
+</html>

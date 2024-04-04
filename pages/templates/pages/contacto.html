@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROMINA RAQUEL GALEANO BLASCO</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <!-- Agrega más burbujas si lo deseas -->
+    </div>
+    
+    <header>
+        <h1>Mi Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Inicio</a><li>
+                    <li><a href="{% url 'personal-info' %}">Informacion_personal</a></li>   
+                <li><a href="{% url 'projects' %}">Proyectos</a></li>
+                <li><a href="{% url 'skills' %}">Habilidades</a></li>
+                <li><a href="{% url 'contact' %}">Contacto</a></li>
+                <li><a href="https://www.originarse.com.ar">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Bienvenido a mi Portfolio</h2>
+            <p>¡Aquí encontrarás mi trabajo y proyectos!</p>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section class="contact">
+        <h2>Contacto</h2>
+        <p>Teléfono: 3516079540</p>
+        <p>WhatsApp: +54 9 351 607 9540</p>
+        <!-- Agrega más detalles de contacto si es necesario -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mi Portfolio</p>
+    </footer>
+</body>
+</html>

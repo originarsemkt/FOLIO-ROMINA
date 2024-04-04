@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROMINA RAQUEL GALEANO BLASCO</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        /* Estilos adicionales para la sección con video de fondo */
+        .video-background {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Altura total de la pantalla */
+            overflow: hidden;
+        }
+        
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Para cubrir toda la pantalla */
+        }
+        
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1; /* Asegúrate de que esté encima del video */
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="{% url 'personal-info' %}">Informacion_personal</a></li>   
+                <li><a href="{% url 'projects' %}">Proyectos</a></li>
+                <li><a href="{% url 'skills' %}">Habilidades</a></li>
+                <li><a href="{% url 'contact' %}">Contacto</a></li>
+                <li><a href="https://www.originarse.com.ar">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección con video de fondo -->
+    <section class="hero">
+        <div class="video-background">
+            <video autoplay muted loop>
+                <source src="{% static 'videos/Portfolio_Presentation.mp4' %}" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+            <div class="hero-content">
+                <h2>Bienvenido a mi Portfolio</h2>
+                <p>¡Aquí encontrarás mi trabajo y proyectos!</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mi Portfolio</p>
+    </footer>
+</body>
+</html>

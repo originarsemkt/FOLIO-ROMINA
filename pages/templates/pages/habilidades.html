@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROMINA RAQUEL GALEANO BLASCO - Habilidades</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <!-- Agrega más burbujas si lo deseas -->
+    </div>
+    
+    <header>
+        <h1>Mi Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Inicio</a><li>
+                    <li><a href="{% url 'personal-info' %}">Informacion_personal</a></li>   
+                <li><a href="{% url 'projects' %}">Proyectos</a></li>
+                <li><a href="{% url 'skills' %}">Habilidades</a></li>
+                <li><a href="{% url 'contact' %}">Contacto</a></li>
+                <li><a href="https://www.originarse.com.ar">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Sección de Habilidades -->
+    <section class="skills">
+        <h2>Habilidades</h2>
+        <ul>
+            <li><strong>Python:</strong> Lenguaje de programación versátil y poderoso.</li>
+            <li><strong>Data Analytic:</strong> Análisis de datos para obtener información útil.</li>
+            <li><strong>JavaScript:</strong> Lenguaje de programación para desarrollo web.</li>
+            <li><strong>Análisis de prevención de Fraude:</strong> Identificación y prevención de actividades fraudulentas.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mi Portfolio</p>
+    </footer>
+</body>
+</html>
