@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+
+{% load static %}  <!-- Cargar las etiquetas estáticas necesarias para los recursos -->
+
+{% block title %}Sobre mi{% endblock %}
+
+{% block image-header %}about{% endblock %}
+
+{% block title-header %}
+<div>
+    <h1 class="display-4 fw-bold">Romina Galeano</h1>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="row d-flex">
+    <div class="col-1 offset-md-auto">
+        <img class='img-fluid img-thumbnail img-circle img-perfil' src="{% static 'portfolio/perfil.png' %}" alt="">
+    </div>
+    <div class="col-6">
+        <p class="texto-justificado">
+            <p>Mi objetivo es aplicar los conocimientos adquiridos en años de estudio y práctica laboral, desarrollándome profesionalmente y aportando al buen desempeño de los retos propuestos a diario.</p>
+            <p>Soy proactiva, me gustan los desafíos, aplicar mis conocimientos en los campos requeridos e incrementar los mismos, enfocándome al alcance de objetivos planteados y metas a cumplir. 
+                Me gusta el trabajo en equipo, los trabajos en red. Es fundamental para mí el valor agregado en cada actividad que desempeño. ¡Me caracterizo por ser alegre y sociable, y me gusta que sea así!.</p>
+        </p>
+    </div>
+
+<div class="row d-flex pt-5">
+    <div class="col-8">
+        <h2 class="fm-bold">Formación Académica</h2>
+        {% for course in courses %}
+            <h3>{{ course.title }}</h3>
+            <p><strong>Título obtenido:</strong> {{ course.degree_title }}</p>
+            <p><strong>Descripción:</strong> {{ course.description }}</p>  <!-- Asegúrate de que los nombres de campo coincidan con tu modelo -->
+            <hr>
+        {% endfor %}
+    </div>
+</div>
+
+<h2 class="fm-bold">Conocimientos</h2>
+<section class="skills" id="skills">
+    <div class="skills_container">
+        {% for skill in skills %}
+            <div class="card_skills">
+                <img class="skill__logo" src="{{ skill.image.url }}" alt="{{ skill.title }}">
+                <div class="skill_texto">
+                    <p class="skill__title">{{ skill.title }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

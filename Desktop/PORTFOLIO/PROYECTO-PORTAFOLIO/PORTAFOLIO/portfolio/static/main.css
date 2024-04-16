@@ -1,0 +1,81 @@
+body {
+    background: #090909;
+}
+
+.bg-black {
+    background: #000;
+}
+
+.card-project {
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.profile-container {
+    position: relative;
+    text-align: left;
+}
+
+.profile-content {
+    position: absolute;
+    top: 0;
+    left: 20;
+    padding: 50px;
+    color: white;
+}
+
+.small-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.card .img-thumbnail {
+    max-width: 80%; /* Ancho máximo de la imagen */
+    height: auto; /* Altura automática */
+    margin-bottom: 20px; /* Espacio entre las imágenes */
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    box-shadow: none; /* Sin sombra */
+}
+
+.card {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.texto-justificado {
+    text-align: justify;
+}
+
+/* Estilo del contenedor que alberga todas las tarjetas de habilidades */
+.skills_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilo de cada tarjeta de habilidad */
+.card_skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px; /* Controla el ancho de cada tarjeta */
+    overflow: hidden; /* Previene que el contenido desborde */
+}
+
+/* Estilo de las imágenes de las habilidades */
+.skill__logo {
+    width: 100%;  /* Ocupa todo el ancho de su contenedor */
+    height: 100px;  /* Altura fija */
+    object-fit: cover;  /* Ajusta el contenido para cubrir el espacio asignado sin deformarse */
+}
+
+.skill_texto {
+    text-align: center;
+    margin-top: 10px;
+}

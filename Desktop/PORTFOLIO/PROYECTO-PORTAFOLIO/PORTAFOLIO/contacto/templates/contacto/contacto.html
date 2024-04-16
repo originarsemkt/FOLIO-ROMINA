@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="container">
+    <h1 class="text-center mb-4">Contacto</h1>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" class="form-control"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6 text-center">
+            <!-- Iconos de redes sociales con enlaces -->
+            <div class="mb-3">
+                <a href="https://www.linkedin.com/in/rominagaleanoblasco/" class="btn btn-dark">
+                    <img src="{% static 'portfolio/linkedin1.jpeg' %}" alt="Linkedin" style="width: 200px; height: 200px;">
+                </a>
+                <a href="https://www.instagram.com/originarseasesoriaymarketing/" class="btn btn-dark">
+                    <img src="{% static 'portfolio/instagram1.jpeg' %}" alt="Instagram" style="width: 200px; height: 200px;">
+                </a>
+                <a href="https://originarse.com.ar/home" class="btn btn-dark">
+                    <img src="{% static 'portfolio/github.jpeg' %}" alt="GitHub" style="width: 200px; height: 200px;">
+                </a>
+                <a href="https://wa.me/5493516079540?text=Hola%2C%20me%20gustaría%20consultarte%20algo" class="btn btn-success">
+                    <img src="{% static 'portfolio/whatsapp.jpeg' %}" alt="WhatsApp" style="width: 200px; height: 200px;">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
